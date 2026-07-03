@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>무지개맨션 × 발렌 · 브랜드위크 4개월 종합 리포트</title>
+<style>
+  :root {
+    --navy: #0A1442;
+    --blue: #4472C4;
+    --light-blue: #DAE6F5;
+    --accent: #E8534A;
+    --green: #2ECC71;
+    --yellow: #F4C542;
+    --gray: #6B7280;
+    --bg: #F8FAFC;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+    --mar: #8B5CF6;
+    --apr: #F59E0B;
+    --may: #10B981;
+    --jun: #4472C4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: var(--bg); color: #1A202C; line-height: 1.6; font-size: 15px; }
+
+  /* HEADER */
+  .header { background: var(--navy); color: #fff; padding: 52px 60px 44px; position: relative; overflow: hidden; }
+  .header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 320px; height: 320px; border-radius: 50%; background: rgba(68,114,196,0.15); }
+  .header::after { content: ''; position: absolute; bottom: -80px; right: 120px; width: 200px; height: 200px; border-radius: 50%; background: rgba(68,114,196,0.08); }
+  .brand-tag { font-size: 13px; font-weight: 600; letter-spacing: 3px; color: var(--blue); text-transform: uppercase; margin-bottom: 14px; }
+  .header h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.3; margin-bottom: 10px; }
+  .header .sub { font-size: 16px; color: rgba(255,255,255,0.6); margin-top: 8px; }
+  .header .meta { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+  .header .meta-item { font-size: 14px; color: rgba(255,255,255,0.55); }
+  .header .meta-item strong { display: block; font-size: 16px; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 2px; }
+  .confidential { position: absolute; top: 28px; right: 60px; font-size: 12px; letter-spacing: 2px; color: rgba(255,255,255,0.2); font-weight: 600; }
+
+  /* LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 48px 40px; }
+  .section { margin-bottom: 60px; }
+  .section-title { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: var(--blue); text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue); }
+  .section-heading { font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: -0.3px; }
+  .section-desc { font-size: 15px; color: var(--gray); margin-bottom: 24px; }
+
+  /* PHASE LEGEND */
+  .phase-legend { display: flex; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
+  .phase-badge { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--border); border-radius: 40px; padding: 8px 16px; }
+  .phase-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .phase-badge .label { font-size: 14px; font-weight: 700; color: var(--navy); }
+  .phase-badge .desc { font-size: 13px; color: var(--gray); margin-left: 4px; }
+
+  /* GROUP BANNER */
+  .group-banner { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  .group-card { border-radius: 12px; padding: 20px 24px; }
+  .group-card.mw { background: linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%); border: 1px solid #C4B5FD; }
+  .group-card.mp { background: linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%); border: 1px solid #FCD34D; }
+  .group-card .g-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .group-card.mw .g-label { color: #6D28D9; }
+  .group-card.mp .g-label { color: #B45309; }
+  .group-card .g-title { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .group-card .g-months { font-size: 14px; color: var(--gray); }
+
+  /* KPI CARDS */
+  .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+  .kpi-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px 18px; }
+  .kpi-card.highlight { border-color: var(--blue); background: linear-gradient(135deg, #f0f5ff 0%, #fff 100%); }
+  .kpi-label { font-size: 13px; font-weight: 600; color: var(--gray); letter-spacing: 0.5px; margin-bottom: 10px; }
+  .kpi-value { font-size: 30px; font-weight: 800; color: var(--navy); letter-spacing: -1px; line-height: 1; }
+  .kpi-value span { font-size: 15px; font-weight: 600; color: var(--gray); margin-left: 2px; }
+  .kpi-change { margin-top: 8px; font-size: 14px; font-weight: 600; }
+  .kpi-change.up { color: #059669; }
+  .kpi-change.down { color: var(--accent); }
+  .kpi-sub { font-size: 13px; color: var(--gray); margin-top: 4px; }
+
+  /* COMPARISON TABLE */
+  .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; }
+  .compare-table th { background: var(--navy); color: #fff; padding: 12px 14px; text-align: center; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
+  .compare-table th:first-child { text-align: left; border-radius: 10px 0 0 0; }
+  .compare-table th:last-child { border-radius: 0 10px 0 0; }
+  .compare-table th.col-mar, .compare-table th.col-apr, .compare-table th.col-may, .compare-table th.col-jun { color: var(--navy); }
+  .compare-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); background: #fff; text-align: center; }
+  .compare-table td:first-child { text-align: left; font-weight: 600; color: var(--navy); background: #FAFBFD; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:last-child td:first-child { border-radius: 0 0 0 10px; }
+  .compare-table tr:last-child td:last-child { border-radius: 0 0 10px 0; }
+  .table-wrapper { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 8px; }
+  .col-mar { background: #F5F3FF !important; }
+  .col-apr { background: #FFFBEB !important; }
+  .col-may { background: #F0FDF4 !important; }
+  .col-jun { background: #EFF6FF !important; }
+  .col-mw { background: #FAF5FF !important; }
+  .col-mp { background: #FFFBEB !important; }
+  .tag-up { background: #D1FAE5; color: #065F46; font-size: 12px; font-weight: 700; padding: 2px 7px; border-radius: 20px; display: inline-block; }
+  .tag-down { background: #FEE2E2; color: #991B1B; font-size: 12px; font-weight: 700; padding: 2px 7px; border-radius: 20px; display: inline-block; }
+  .tag-best { background: #DBEAFE; color: #1E40AF; font-size: 12px; font-weight: 700; padding: 2px 7px; border-radius: 20px; display: inline-block; }
+  .tag-neutral { background: #F3F4F6; color: #374151; font-size: 12px; font-weight: 600; padding: 2px 7px; border-radius: 20px; display: inline-block; }
+  .group-header { font-size: 12px; font-weight: 700; letter-spacing: 2px; padding: 2px 8px; border-radius: 4px; display: block; margin-bottom: 2px; }
+
+  /* FUNNEL GRID */
+  .funnel-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .funnel-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+  .funnel-card .month { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .funnel-card.mar .month { color: #6D28D9; }
+  .funnel-card.apr .month { color: #B45309; }
+  .funnel-card.may .month { color: #065F46; }
+  .funnel-card.jun .month { color: #1E40AF; }
+  .funnel-step { margin-bottom: 4px; }
+  .funnel-bar-wrap { display: flex; align-items: center; gap: 8px; margin-bottom: 1px; }
+  .funnel-bar { height: 7px; border-radius: 4px; flex-shrink: 0; }
+  .funnel-bar.mar { background: var(--mar); }
+  .funnel-bar.apr { background: var(--apr); }
+  .funnel-bar.may { background: var(--may); }
+  .funnel-bar.jun { background: var(--jun); }
+  .funnel-num { font-size: 15px; font-weight: 700; color: var(--navy); }
+  .funnel-label { font-size: 13px; color: var(--gray); }
+  .funnel-arrow { text-align: center; color: #CBD5E1; font-size: 13px; margin: 3px 0; }
+  .funnel-rate { font-size: 13px; font-weight: 700; padding: 1px 6px; border-radius: 4px; display: inline-block; }
+  .funnel-rate.mar { background: #EDE9FE; color: #5B21B6; }
+  .funnel-rate.apr { background: #FEF3C7; color: #92400E; }
+  .funnel-rate.may { background: #D1FAE5; color: #065F46; }
+  .funnel-rate.jun { background: #DBEAFE; color: #1E40AF; }
+
+  /* EXTERNAL AD SECTION */
+  .ext-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+  .ext-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-align: center; }
+  .ext-card .m-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .ext-card .big-num { font-size: 36px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+  .ext-card .sub-label { font-size: 13px; color: var(--gray); margin-top: 4px; }
+  .ext-card .pct-badge { font-size: 14px; font-weight: 700; margin-top: 10px; padding: 3px 12px; border-radius: 20px; display: inline-block; }
+  .ext-card .prog-bg { margin-top: 10px; background: #F3F4F6; border-radius: 4px; height: 6px; overflow: hidden; }
+  .ext-card .prog-fill { height: 100%; border-radius: 4px; }
+
+  /* AOV CHART */
+  .aov-visual { display: flex; align-items: flex-end; gap: 28px; padding: 36px 40px; background: #fff; border: 1px solid var(--border); border-radius: 14px; justify-content: center; }
+  .aov-bar-group { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .aov-bar-outer { width: 80px; background: #F3F4F6; border-radius: 8px; overflow: hidden; display: flex; align-items: flex-end; height: 160px; }
+  .aov-bar-inner { width: 100%; border-radius: 8px; }
+  .aov-val { font-size: 19px; font-weight: 800; }
+  .aov-month { font-size: 13px; font-weight: 600; letter-spacing: 1px; color: var(--gray); margin-top: 4px; }
+  .aov-change { font-size: 12px; font-weight: 700; margin-top: 2px; }
+  .arrow-right { font-size: 26px; color: #CBD5E1; margin-bottom: 50px; }
+
+  /* SKU TABLE */
+  .sku-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sku-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+  .sku-card .sku-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 14px; letter-spacing: 0.5px; }
+  .sku-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .sku-name { font-size: 14px; font-weight: 600; color: var(--navy); width: 90px; flex-shrink: 0; }
+  .sku-bar-bg { flex: 1; background: #F3F4F6; border-radius: 4px; height: 8px; overflow: hidden; }
+  .sku-bar-fill { height: 100%; border-radius: 4px; }
+  .sku-pct { font-size: 14px; font-weight: 700; width: 45px; text-align: right; flex-shrink: 0; }
+
+  /* INSIGHT BOXES */
+  .insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .insight-box { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+  .insight-box .icon { font-size: 22px; margin-bottom: 10px; }
+  .insight-box h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .insight-box p { font-size: 14px; color: #4B5563; line-height: 1.7; }
+  .insight-box .highlight-num { font-size: 20px; font-weight: 800; color: var(--blue); }
+  .insight-box.featured { border-color: var(--blue); background: linear-gradient(135deg, #EFF6FF 0%, #fff 100%); grid-column: span 2; }
+
+  /* DARK HIGHLIGHT BOX */
+  .dark-box { background: linear-gradient(135deg, #0A1442 0%, #1a2a6c 100%); border-radius: 16px; padding: 32px 36px; color: #fff; margin-bottom: 24px; }
+  .dark-box h2 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .dark-box .sub { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+  .dark-box .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .dark-box .point { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 16px; }
+  .dark-box .point .num { font-size: 27px; font-weight: 800; color: #93C5FD; line-height: 1; }
+  .dark-box .point .unit { font-size: 13px; color: rgba(255,255,255,0.5); }
+  .dark-box .point .desc { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; line-height: 1.5; }
+
+  /* ANOMALY NOTE */
+  .anomaly-note { background: #FEF9EC; border: 1px solid #FCD34D; border-radius: 10px; padding: 14px 18px; font-size: 13px; color: #92400E; margin-top: 10px; line-height: 1.6; }
+  .anomaly-note strong { font-weight: 700; }
+
+  /* NEXT ACTIONS */
+  .next-actions { background: var(--navy); border-radius: 14px; padding: 28px 32px; color: #fff; }
+  .next-actions h3 { font-size: 14px; font-weight: 700; margin-bottom: 16px; color: rgba(255,255,255,0.6); letter-spacing: 2px; text-transform: uppercase; }
+  .next-actions ul { list-style: none; }
+  .next-actions li { font-size: 14px; color: rgba(255,255,255,0.78); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: flex-start; gap: 10px; }
+  .next-actions li:last-child { border-bottom: none; }
+  .next-actions li::before { content: '→'; color: #60A5FA; font-weight: 700; flex-shrink: 0; }
+
+  /* CONCLUSION GRID */
+  .conclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+  .conclusion-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+  .conclusion-card .num { font-size: 32px; font-weight: 800; color: var(--navy); }
+  .conclusion-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin: 8px 0 6px; }
+  .conclusion-card p { font-size: 13px; color: #4B5563; line-height: 1.6; }
+
+  /* GROUP COMPARISON TABLE */
+  .group-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .gc-card { border-radius: 14px; padding: 22px; }
+  .gc-card.mw { background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%); border: 1px solid #C4B5FD; }
+  .gc-card.mp { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border: 1px solid #FCD34D; }
+  .gc-card .gc-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .gc-card .gc-months { font-size: 13px; margin-bottom: 16px; }
+  .gc-card.mw .gc-months { color: #6D28D9; }
+  .gc-card.mp .gc-months { color: #B45309; }
+  .gc-metric { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .gc-metric:last-child { border-bottom: none; }
+  .gc-metric .gc-k { font-size: 14px; color: var(--gray); }
+  .gc-metric .gc-v { font-size: 15px; font-weight: 700; color: var(--navy); }
+
+  /* DAILY TABLE */
+  .daily-wrap { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .daily-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .daily-table th { background: var(--navy); color: #fff; padding: 10px 12px; text-align: center; font-size: 12px; font-weight: 600; }
+  .daily-table th:first-child { text-align: left; }
+  .daily-table td { padding: 9px 12px; border-bottom: 1px solid #F3F4F6; text-align: center; background: #fff; }
+  .daily-table td:first-child { text-align: left; font-weight: 600; color: var(--navy); }
+  .daily-table .sep-row td { background: #F8FAFC; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--gray); padding: 7px 12px; text-transform: uppercase; }
+  .daily-table .highlight-row td { background: #FFFBEB; }
+  .daily-table .weekend-row td { background: #F0FDF4; }
+
+  /* FOOTER */
+  .footer { background: var(--navy); color: rgba(255,255,255,0.35); text-align: center; padding: 20px; font-size: 13px; letter-spacing: 1px; }
+  .divider { height: 1px; background: var(--border); margin: 40px 0; }
+  .note { font-size: 13px; color: var(--gray); margin-top: 8px; }
+  .green { color: #059669; } .red { color: #DC2626; } .blue-t { color: var(--blue); }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="confidential">CONFIDENTIAL · INTERNAL USE</div>
+  <div class="brand-tag">Valen × 무지개맨션 · Qoo10 JP</div>
+  <h1>브랜드위크 4개월 종합 리포트<br><span style="font-weight:400;font-size:20px;opacity:0.7">인하우스 → 발렌 일부 → 발렌 풀오퍼레이션 · 누적 성과 검증</span></h1>
+  <div class="sub">메가와리/메가포 직후 그룹 비교 · 외부광고 기여 분석 · 히어로 SKU 점유율 추적</div>
+  <div class="meta">
+    <div class="meta-item">분석 기간<strong>2026.03.20~25 / 04.16~21 / 05.18~25 / 06.22~28</strong></div>
+    <div class="meta-item">채널<strong>Qoo10 (일본)</strong></div>
+    <div class="meta-item">기준일<strong>2026년 6월 30일</strong></div>
+    <div class="meta-item">대시보드<strong><a href="https://app.adriel.com/#/dashboard/shared/MI4xThfgi8vu3r11?viewId=241068" target="_blank" rel="noopener" style="color:#93C5FD; text-decoration:none; border-bottom:1px solid rgba(147,197,253,0.4);">아드리엘 ↗</a></strong></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- PHASE LEGEND -->
+  <div class="phase-legend">
+    <div class="phase-badge">
+      <div class="phase-dot" style="background:#8B5CF6"></div>
+      <div class="label">3월 브랜드위크</div>
+      <div class="desc">3/20~25 · 메가와리 직후 · 인하우스</div>
+    </div>
+    <div class="phase-badge">
+      <div class="phase-dot" style="background:#F59E0B"></div>
+      <div class="label">4월 브랜드위크</div>
+      <div class="desc">4/16~21 · 메가포 직후 · 인하우스</div>
+    </div>
+    <div class="phase-badge">
+      <div class="phase-dot" style="background:#10B981"></div>
+      <div class="label">5월 브랜드위크</div>
+      <div class="desc">5/18~25 · 메가포 직후 · 발렌 일부</div>
+    </div>
+    <div class="phase-badge">
+      <div class="phase-dot" style="background:#4472C4"></div>
+      <div class="label">6월 브랜드위크</div>
+      <div class="desc">6/22~28 · 메가와리 직후 · 발렌 풀</div>
+    </div>
+  </div>
+
+  <!-- 00. 핵심 KPI -->
+  <div class="section">
+    <div class="section-title">00 · 핵심 지표 요약</div>
+    <div class="section-heading">4개월 브랜드위크 핵심 변화</div>
+    <div class="section-desc">6월 완료 기준 (6/22~6/28, 7일). 3월 이상치(3/23 단일일 주문 48.9% 집중) 별도 표기.</div>
+    <div class="kpi-row">
+      <div class="kpi-card highlight">
+        <div class="kpi-label">외부유입 비중 추이</div>
+        <div class="kpi-value">38.1<span>%</span></div>
+        <div class="kpi-change up">▲ +35.4%p (3월 대비)</div>
+        <div class="kpi-sub">3월 2.7% → 4월 17.9% → 5월 27.0% → 6월 38.1%</div>
+      </div>
+      <div class="kpi-card highlight">
+        <div class="kpi-label">신규고객 비율 추이</div>
+        <div class="kpi-value">81.2<span>%</span></div>
+        <div class="kpi-change up">▲ +21%p (3월 대비)</div>
+        <div class="kpi-sub">3월 60.2% → 4월 71.8% → 5월 80.0% → 6월 81.2%</div>
+      </div>
+      <div class="kpi-card highlight">
+        <div class="kpi-label">객단가 (AOV)</div>
+        <div class="kpi-value">¥2,151</div>
+        <div class="kpi-change up">▲ +8.7% vs 4월</div>
+        <div class="kpi-sub">4월 ¥1,979 → 5월 ¥2,115 → 6월 ¥2,151 (상시기간)</div>
+      </div>
+      <div class="kpi-card highlight">
+        <div class="kpi-label">장바구니→주문 (6월 완료)</div>
+        <div class="kpi-value">29.4<span>%</span></div>
+        <div class="kpi-change up">▲ +5.8%p vs 5월</div>
+        <div class="kpi-sub">5월 23.65% → 6월 29.40% 반등</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01. 4개월 전체 비교 테이블 -->
+  <div class="section">
+    <div class="section-title">01 · 종합 비교</div>
+    <div class="section-heading">4개월 전체 지표 비교</div>
+    <div class="section-desc">일평균 기준 계산. 3월 ¥49,414는 3/23 이상치 포함치 — 제외 시 ¥32,742.</div>
+    <div class="table-wrapper">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>지표</th>
+            <th class="col-mar">3월 브랜드위크<br><small style="font-weight:400;opacity:0.7">3/20~25 · 6일 · 메가와리↓ · 인하우스</small></th>
+            <th class="col-apr">4월 브랜드위크<br><small style="font-weight:400;opacity:0.7">4/16~21 · 6일 · 메가포↓ · 인하우스</small></th>
+            <th class="col-may">5월 브랜드위크<br><small style="font-weight:400;opacity:0.7">5/18~25 · 8일 · 메가포↓ · 발렌일부</small></th>
+            <th class="col-jun">6월 브랜드위크<br><small style="font-weight:400;opacity:0.7">6/22~28 · 7일 · 메가와리↓ · 발렌풀</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>총 PV</td>
+            <td class="col-mar">6,841</td>
+            <td class="col-apr">7,484</td>
+            <td class="col-may">12,265</td>
+            <td class="col-jun">8,620</td>
+          </tr>
+          <tr>
+            <td>유입자수</td>
+            <td class="col-mar">5,125</td>
+            <td class="col-apr">6,165</td>
+            <td class="col-may">10,568</td>
+            <td class="col-jun">7,319</td>
+          </tr>
+          <tr>
+            <td>장바구니</td>
+            <td class="col-mar">463</td>
+            <td class="col-apr">603</td>
+            <td class="col-may">723</td>
+            <td class="col-jun">398</td>
+          </tr>
+          <tr>
+            <td>주문완료</td>
+            <td class="col-mar">141</td>
+            <td class="col-apr"><span class="tag-best">206 ▲최고</span></td>
+            <td class="col-may">171</td>
+            <td class="col-jun">117</td>
+          </tr>
+          <tr>
+            <td>최종 CVR</td>
+            <td class="col-mar">2.75% <small style="color:#6B7280">(이상치 포함)</small><br><small style="color:#9CA3AF">제외 시 1.87%</small></td>
+            <td class="col-apr"><span class="tag-best">3.34% ▲최고</span></td>
+            <td class="col-may">1.62%</td>
+            <td class="col-jun">1.60%</td>
+          </tr>
+          <tr>
+            <td>장바구니 전환율</td>
+            <td class="col-mar"><span class="tag-best">9.03% ▲</span></td>
+            <td class="col-apr"><span class="tag-best">9.78% ▲최고</span></td>
+            <td class="col-may">6.84%</td>
+            <td class="col-jun">5.44%</td>
+          </tr>
+          <tr>
+            <td>장바구니→주문</td>
+            <td class="col-mar">30.45%</td>
+            <td class="col-apr"><span class="tag-best">34.16% ▲최고</span></td>
+            <td class="col-may"><span class="tag-down">23.65% ▼</span></td>
+            <td class="col-jun">29.40% <span class="tag-up">↑반등</span></td>
+          </tr>
+          <tr>
+            <td>외부유입 비중</td>
+            <td class="col-mar">2.7%</td>
+            <td class="col-apr">17.9%</td>
+            <td class="col-may">27.0%</td>
+            <td class="col-jun"><span class="tag-best">38.1% ▲최고</span></td>
+          </tr>
+          <tr>
+            <td>외부유입 채널</td>
+            <td class="col-mar">직접유입 위주</td>
+            <td class="col-apr">X·FB·IG 혼재</td>
+            <td class="col-may">IG 90.5%</td>
+            <td class="col-jun">IG 92.3%</td>
+          </tr>
+          <tr>
+            <td>총 매출</td>
+            <td class="col-mar">¥296,487</td>
+            <td class="col-apr"><span class="tag-best">¥407,715 ▲최고</span></td>
+            <td class="col-may">¥361,687</td>
+            <td class="col-jun">¥251,725</td>
+          </tr>
+          <tr>
+            <td>객단가 (AOV)</td>
+            <td class="col-mar">¥2,103</td>
+            <td class="col-apr"><span class="tag-down">¥1,979 ▼최저</span></td>
+            <td class="col-may">¥2,115</td>
+            <td class="col-jun"><span class="tag-best">¥2,151 ▲최고</span></td>
+          </tr>
+          <tr>
+            <td>일평균 매출</td>
+            <td class="col-mar">¥49,414 <small style="color:#9CA3AF">(이상치포함)</small><br><small style="color:#9CA3AF">제외 시 ¥32,742</small></td>
+            <td class="col-apr"><span class="tag-best">¥67,952 ▲최고</span></td>
+            <td class="col-may">¥45,211</td>
+            <td class="col-jun">¥35,961</td>
+          </tr>
+          <tr>
+            <td>신규고객 비율</td>
+            <td class="col-mar">60.2%</td>
+            <td class="col-apr">71.8%</td>
+            <td class="col-may">80.0%</td>
+            <td class="col-jun"><span class="tag-best">81.2% ▲최고</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">* 4월 최고 수치는 메가포 직후 구매 의향 피크 시즌 효과. 단순 월별 우열 비교보다 그룹(메가와리 직후 / 메가포 직후)별 비교가 의미 있습니다.</div>
+  </div>
+
+  <!-- 02. 그룹 비교 -->
+  <div class="section">
+    <div class="section-title">02 · 그룹 비교</div>
+    <div class="section-heading">메가와리 직후 vs 메가포 직후</div>
+    <div class="section-desc">프로모션 성격이 다른 두 그룹은 같은 기준으로 비교하면 안 됩니다. 각 그룹 내 트렌드로 성과를 읽어야 합니다.</div>
+
+    <div class="group-compare">
+      <div class="gc-card mw">
+        <div class="gc-title">메가와리 직후 그룹</div>
+        <div class="gc-months">3월(인하우스) + 6월(발렌 풀)</div>
+        <div class="gc-metric"><span class="gc-k">평균 CVR</span><span class="gc-v">1.74% <small style="font-weight:400;color:#9CA3AF">(3/23 이상치 제외)</small></span></div>
+        <div class="gc-metric"><span class="gc-k">평균 AOV</span><span class="gc-v">¥2,127</span></div>
+        <div class="gc-metric"><span class="gc-k">평균 신규고객</span><span class="gc-v">70.7%</span></div>
+        <div class="gc-metric"><span class="gc-k">일평균 매출</span><span class="gc-v">¥34,352 <small style="font-weight:400;color:#9CA3AF">(이상치 제외)</small></span></div>
+        <div class="gc-metric"><span class="gc-k">외부유입 변화</span><span class="gc-v" style="color:#059669">2.7% → 38.1% (+35.4%p)</span></div>
+        <div class="gc-metric"><span class="gc-k">신규고객 변화</span><span class="gc-v" style="color:#059669">60.2% → 81.2% (+21%p)</span></div>
+        <div class="gc-metric"><span class="gc-k">특징</span><span class="gc-v">기존 팬 재방문 + AOV 높음</span></div>
+      </div>
+      <div class="gc-card mp">
+        <div class="gc-title">메가포 직후 그룹</div>
+        <div class="gc-months">4월(인하우스) + 5월(발렌 일부)</div>
+        <div class="gc-metric"><span class="gc-k">평균 CVR</span><span class="gc-v">2.48%</span></div>
+        <div class="gc-metric"><span class="gc-k">평균 AOV</span><span class="gc-v">¥2,047</span></div>
+        <div class="gc-metric"><span class="gc-k">평균 신규고객</span><span class="gc-v">75.9%</span></div>
+        <div class="gc-metric"><span class="gc-k">일평균 매출</span><span class="gc-v">¥56,582</span></div>
+        <div class="gc-metric"><span class="gc-k">외부유입 변화</span><span class="gc-v" style="color:#059669">17.9% → 27.0% (+9.1%p)</span></div>
+        <div class="gc-metric"><span class="gc-k">신규고객 변화</span><span class="gc-v" style="color:#059669">71.8% → 80.0% (+8.2%p)</span></div>
+        <div class="gc-metric"><span class="gc-k">특징</span><span class="gc-v">구매 의향 고조 · CVR 높음</span></div>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>비교 항목</th>
+            <th>메가와리 직후<br><small style="font-weight:400;opacity:0.7">3월 + 6월 평균</small></th>
+            <th>메가포 직후<br><small style="font-weight:400;opacity:0.7">4월 + 5월 평균</small></th>
+            <th>해석</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>평균 CVR</td>
+            <td class="col-mw">1.74%</td>
+            <td class="col-mp">2.48%</td>
+            <td>메가포 직후 구매 의향 더 높음 (상시기간 vs 할인이벤트 직후)</td>
+          </tr>
+          <tr>
+            <td>평균 AOV</td>
+            <td class="col-mw"><strong>¥2,127</strong> <span class="tag-best">↑높음</span></td>
+            <td class="col-mp">¥2,047</td>
+            <td>메가와리에서 고단가 쿠션·세트 경험 후 단가 유지</td>
+          </tr>
+          <tr>
+            <td>평균 신규고객</td>
+            <td class="col-mw">70.7%</td>
+            <td class="col-mp">75.9%</td>
+            <td>메가포 직후가 신규 비율 소폭 높음</td>
+          </tr>
+          <tr>
+            <td>일평균 매출</td>
+            <td class="col-mw">¥34,352</td>
+            <td class="col-mp"><strong>¥56,582</strong> <span class="tag-best">↑높음</span></td>
+            <td>메가포 직후 시즌 효과로 볼륨 차이 발생</td>
+          </tr>
+          <tr>
+            <td>그룹 내 외부유입 성장</td>
+            <td class="col-mw"><strong>+35.4%p</strong> <span class="tag-best">↑더 큰 성장</span></td>
+            <td class="col-mp">+9.1%p</td>
+            <td>기저가 낮았던 메가와리 그룹에서 발렌 효과 극대화</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="anomaly-note">
+      <strong>⚠ 3월 3/23 이상치 주의:</strong> 3월 브랜드위크 전체 141건 주문 중 69건(48.9%)이 3/23(월) 하루에 집중. 셀러샵 직접방문 191 PV로 당일 최고 — 메가와리 종료 후 기존 팬들의 지연 재결제 패턴. 이상치 제외 시 3월 CVR 1.87%, 일평균 매출 ¥32,742로 6월과 거의 동일한 수준.
+    </div>
+  </div>
+
+  <!-- 03. 전환 퍼널 -->
+  <div class="section">
+    <div class="section-title">03 · 전환 퍼널</div>
+    <div class="section-heading">월별 구매 여정 비교</div>
+    <div class="section-desc">유입 → 장바구니 → 주문 각 단계 전환율. 외부 신규 유입이 많을수록 장바구니전환율은 낮아지는 구조적 현상 반영.</div>
+    <div class="funnel-grid">
+      <div class="funnel-card mar">
+        <div class="month">MAR · 3월</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar mar" style="width:100%"></div></div>
+          <div class="funnel-num">5,125</div>
+          <div class="funnel-label">유입자수</div>
+        </div>
+        <div class="funnel-arrow">↓ 9.03%</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar mar" style="width:70%"></div></div>
+          <div class="funnel-num">463</div>
+          <div class="funnel-label">장바구니</div>
+        </div>
+        <div class="funnel-arrow">↓ 30.45%</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar mar" style="width:40%"></div></div>
+          <div class="funnel-num">141</div>
+          <div class="funnel-label">주문완료</div>
+        </div>
+        <div style="margin-top:12px;padding-top:10px;border-top:1px solid #EDE9FE;">
+          <div class="funnel-label">최종 CVR</div>
+          <span class="funnel-rate mar">2.75%</span>
+          <div class="funnel-label" style="margin-top:6px">이상치 제외 시 1.87%</div>
+        </div>
+      </div>
+      <div class="funnel-card apr">
+        <div class="month">APR · 4월</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar apr" style="width:100%"></div></div>
+          <div class="funnel-num">6,165</div>
+          <div class="funnel-label">유입자수</div>
+        </div>
+        <div class="funnel-arrow">↓ 9.78% ★최고</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar apr" style="width:75%"></div></div>
+          <div class="funnel-num">603</div>
+          <div class="funnel-label">장바구니</div>
+        </div>
+        <div class="funnel-arrow">↓ 34.16% ★최고</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar apr" style="width:55%"></div></div>
+          <div class="funnel-num">206</div>
+          <div class="funnel-label">주문완료</div>
+        </div>
+        <div style="margin-top:12px;padding-top:10px;border-top:1px solid #FEF3C7;">
+          <div class="funnel-label">최종 CVR</div>
+          <span class="funnel-rate apr">3.34% ★최고</span>
+          <div class="funnel-label" style="margin-top:6px">메가포 직후 구매의향 피크</div>
+        </div>
+      </div>
+      <div class="funnel-card may">
+        <div class="month">MAY · 5월</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar may" style="width:100%"></div></div>
+          <div class="funnel-num">10,568</div>
+          <div class="funnel-label">유입자수 ★최고</div>
+        </div>
+        <div class="funnel-arrow">↓ 6.84%</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar may" style="width:60%"></div></div>
+          <div class="funnel-num">723</div>
+          <div class="funnel-label">장바구니 ★최고</div>
+        </div>
+        <div class="funnel-arrow">↓ 23.65% ▼최저</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar may" style="width:40%"></div></div>
+          <div class="funnel-num">171</div>
+          <div class="funnel-label">주문완료</div>
+        </div>
+        <div style="margin-top:12px;padding-top:10px;border-top:1px solid #D1FAE5;">
+          <div class="funnel-label">최종 CVR</div>
+          <span class="funnel-rate may">1.62%</span>
+          <div class="funnel-label" style="margin-top:6px">메가와리 보류 수요 영향</div>
+        </div>
+      </div>
+      <div class="funnel-card jun">
+        <div class="month">JUN · 6월 (완료)</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar jun" style="width:100%"></div></div>
+          <div class="funnel-num">7,319</div>
+          <div class="funnel-label">유입자수</div>
+        </div>
+        <div class="funnel-arrow">↓ 5.44%</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar jun" style="width:50%"></div></div>
+          <div class="funnel-num">398</div>
+          <div class="funnel-label">장바구니</div>
+        </div>
+        <div class="funnel-arrow">↓ 29.40% ↑반등</div>
+        <div class="funnel-step">
+          <div class="funnel-bar-wrap"><div class="funnel-bar jun" style="width:36%"></div></div>
+          <div class="funnel-num">117</div>
+          <div class="funnel-label">주문완료</div>
+        </div>
+        <div style="margin-top:12px;padding-top:10px;border-top:1px solid #DBEAFE;">
+          <div class="funnel-label">최종 CVR</div>
+          <span class="funnel-rate jun">1.60%</span>
+          <div class="funnel-label" style="margin-top:6px">메가세일 外 · 브랜드위크 자체할인</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04. 외부유입 분석 -->
+  <div class="section">
+    <div class="section-title">04 · 외부광고 기여</div>
+    <div class="section-heading">외부유입 비중 증가와 Instagram 채널 단일화</div>
+    <div class="section-desc">발렌 외부광고 도입 이후 Instagram 비중이 90%+ 수준으로 안정화됨.</div>
+    <div class="ext-row">
+      <div class="ext-card">
+        <div class="m-label" style="color:#6D28D9">MAR · 3월</div>
+        <div class="big-num" style="color:#8B5CF6">187</div>
+        <div class="sub-label">외부유입 PV</div>
+        <div class="pct-badge" style="background:#EDE9FE;color:#5B21B6">2.7% of PV</div>
+        <div class="prog-bg"><div class="prog-fill" style="width:2.7%;background:#8B5CF6"></div></div>
+        <div style="margin-top:10px;font-size:11px;color:#6B7280">IG: 13 / FB: 0 / X: 0</div>
+      </div>
+      <div class="ext-card">
+        <div class="m-label" style="color:#B45309">APR · 4월</div>
+        <div class="big-num" style="color:#F59E0B">1,337</div>
+        <div class="sub-label">외부유입 PV</div>
+        <div class="pct-badge" style="background:#FEF3C7;color:#92400E">17.9% of PV</div>
+        <div class="prog-bg"><div class="prog-fill" style="width:17.9%;background:#F59E0B"></div></div>
+        <div style="margin-top:10px;font-size:11px;color:#6B7280">IG: 500 / FB: 581 / X: 96</div>
+      </div>
+      <div class="ext-card">
+        <div class="m-label" style="color:#065F46">MAY · 5월</div>
+        <div class="big-num" style="color:#10B981">3,306</div>
+        <div class="sub-label">외부유입 PV</div>
+        <div class="pct-badge" style="background:#D1FAE5;color:#065F46">27.0% of PV</div>
+        <div class="prog-bg"><div class="prog-fill" style="width:27%;background:#10B981"></div></div>
+        <div style="margin-top:10px;font-size:11px;color:#6B7280">IG: 2,991 (90.5%) / FB·X 소량</div>
+      </div>
+      <div class="ext-card">
+        <div class="m-label" style="color:#1E40AF">JUN · 6월 (완료)</div>
+        <div class="big-num" style="color:#4472C4">3,283</div>
+        <div class="sub-label">외부유입 PV</div>
+        <div class="pct-badge" style="background:#DBEAFE;color:#1E40AF">38.1% of PV ★최고</div>
+        <div class="prog-bg"><div class="prog-fill" style="width:38.1%;background:#4472C4"></div></div>
+        <div style="margin-top:10px;font-size:11px;color:#6B7280">IG: 3,030 (92.3%) / FB: 120</div>
+      </div>
+    </div>
+
+    <!-- 고효율 광고 소재 예시 -->
+    <div style="margin: 32px 0 24px;">
+      <div style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:6px;">🏆 고효율 광고 소재 (6월 브랜드위크·7월 메가포 진행 소재)</div>
+      <div style="font-size:13px; color:var(--gray); margin-bottom:16px;">6월 브랜드위크 7일 누적 성과 (6/22~6/28) · 바이럴 2종이 링크클릭 53.9% 커버</div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;">
+
+        <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+          <img src="바이럴_립.png" alt="바이럴 립 광고 소재" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+          <div style="padding:12px 14px;">
+            <div style="font-size:12px; font-weight:700; color:#059669; margin-bottom:6px;">🏆 바이럴(립)</div>
+            <div style="font-size:12px; color:#374151; line-height:1.6;">
+              <strong>링크클릭 1,911건</strong><br>
+              CTR 4.66% / CPC 108원<br>
+              <span style="color:#6B7280;">스테인 틴트 라인 지속력 어필</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+          <img src="바이럴_쿠션.png" alt="바이럴 쿠션 광고 소재" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+          <div style="padding:12px 14px;">
+            <div style="font-size:12px; font-weight:700; color:#059669; margin-bottom:6px;">🏆 바이럴(쿠션)</div>
+            <div style="font-size:12px; color:#374151; line-height:1.6;">
+              <strong>링크클릭 2,054건 ★최다</strong><br>
+              CTR 4.83% / CPC 102원 ★최저<br>
+              <span style="color:#6B7280;">메쉬쿠션 럭셔리 반전 톤</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+          <img src="브랜디드_립.png" alt="브랜디드 립 광고 소재" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+          <div style="padding:12px 14px;">
+            <div style="font-size:12px; font-weight:700; color:#1E40AF; margin-bottom:6px;">🎨 브랜디드(립)</div>
+            <div style="font-size:12px; color:#374151; line-height:1.6;">
+              <strong>링크클릭 941건</strong><br>
+              CTR 3.23% / CPC 162원<br>
+              <span style="color:#6B7280;">스테인 틴트·뮤티드 블러 노출</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+          <img src="브랜디드_쿠션.png" alt="브랜디드 쿠션 광고 소재" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+          <div style="padding:12px 14px;">
+            <div style="font-size:12px; font-weight:700; color:#1E40AF; margin-bottom:6px;">🎨 브랜디드(쿠션)</div>
+            <div style="font-size:12px; color:#374151; line-height:1.6;">
+              <strong>링크클릭 951건</strong><br>
+              CTR 2.95% / CPC 157원<br>
+              <span style="color:#6B7280;">메쉬쿠션 히어로 라인 소구</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="margin-top:12px; font-size:12px; color:var(--gray); font-style:italic;">※ 6월 브랜드위크 7일(6/22~6/28) 누적 성과. 바이럴 2종(3,965건)이 BW 전체 링크클릭 7,358건 중 53.9% 커버. 파트너십(PA) 별도 CTR 2.30%·링크클릭 1,501건.</div>
+    </div>
+
+    <!-- 6월 외부광고 기여 시뮬레이션 -->
+    <div class="dark-box">
+      <h2>6월 외부광고 기여 시뮬레이션</h2>
+      <div class="sub">외부유입(3,283 PV, 38.1%)을 제거했을 때 예상 주문·매출 변화. 전체 CVR 1.60%로 보수적 추정.</div>
+      <div class="points">
+        <div class="point">
+          <div class="num">+52건</div>
+          <div class="unit">추정 기여 주문</div>
+          <div class="desc">외부광고가 없었다면 ~65건, 광고로 117건 달성. 44% 기여 추정.</div>
+        </div>
+        <div class="point">
+          <div class="num">+¥111,852</div>
+          <div class="unit">추정 기여 매출</div>
+          <div class="desc">총 매출 ¥251,725의 44%. 발렌 외부광고 없이는 ~¥140,000 수준으로 추정.</div>
+        </div>
+        <div class="point">
+          <div class="num">CTR 3.46%</div>
+          <div class="unit">5월과 동일 유지</div>
+          <div class="desc">광고 소재 방향 유지 + 예산 2배 증가에도 효율 저하 없음. CPC ₩141.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05. 객단가 추이 -->
+  <div class="section">
+    <div class="section-title">05 · 객단가 추이</div>
+    <div class="section-heading">AOV 지속 상승 — 할인 없는 상시기간에도 메가와리 이상</div>
+    <div class="section-desc">4월 ¥1,979(최저) → 6월 ¥2,151(최고). 6월 메가와리 기간 AOV ¥1,976 대비 브랜드위크 AOV가 더 높음 — 브랜드위크 자체할인에도 객단가 방어.</div>
+    <div class="aov-visual">
+      <div class="aov-bar-group">
+        <div class="aov-val" style="color:#8B5CF6">¥2,103</div>
+        <div class="aov-bar-outer"><div class="aov-bar-inner" style="height:74%;background:#8B5CF6;"></div></div>
+        <div class="aov-month">3월 BW</div>
+        <div class="aov-change" style="color:#6B7280">메가와리↓</div>
+      </div>
+      <div class="arrow-right">→</div>
+      <div class="aov-bar-group">
+        <div class="aov-val" style="color:#F59E0B">¥1,979</div>
+        <div class="aov-bar-outer"><div class="aov-bar-inner" style="height:62%;background:#F59E0B;"></div></div>
+        <div class="aov-month">4월 BW</div>
+        <div class="aov-change" style="color:#DC2626">메가포↓ ▼최저</div>
+      </div>
+      <div class="arrow-right">→</div>
+      <div class="aov-bar-group">
+        <div class="aov-val" style="color:#10B981">¥2,115</div>
+        <div class="aov-bar-outer"><div class="aov-bar-inner" style="height:78%;background:#10B981;"></div></div>
+        <div class="aov-month">5월 BW</div>
+        <div class="aov-change" style="color:#059669">메가포↓ ▲반등</div>
+      </div>
+      <div class="arrow-right">→</div>
+      <div class="aov-bar-group">
+        <div class="aov-val" style="color:#4472C4">¥2,151</div>
+        <div class="aov-bar-outer"><div class="aov-bar-inner" style="height:86%;background:#4472C4;"></div></div>
+        <div class="aov-month">6월 BW</div>
+        <div class="aov-change" style="color:#059669">메가와리↓ ▲최고</div>
+      </div>
+      <div class="arrow-right" style="margin-bottom:50px;font-size:16px;color:#93C5FD">vs</div>
+      <div class="aov-bar-group">
+        <div class="aov-val" style="color:#6B7280;font-size:14px">¥1,976</div>
+        <div class="aov-bar-outer"><div class="aov-bar-inner" style="height:60%;background:#D1D5DB;"></div></div>
+        <div class="aov-month">6월 메가와리</div>
+        <div class="aov-change" style="color:#6B7280">할인 기간</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:12px">* 할인 없는 상시 브랜드위크(¥2,151)가 메가와리 할인 기간(¥1,976)보다 객단가 높음 → 히어로 SKU 가격 방어력 확인</div>
+  </div>
+
+  <!-- 06. 히어로 SKU -->
+  <div class="section">
+    <div class="section-title">06 · 히어로 SKU</div>
+    <div class="section-heading">스테인틴트 4개월 연속 매출 1위 유지</div>
+    <div class="section-desc">매 브랜드위크마다 스테인틴트 34~40% 점유. 리퀴드틴트·쿠션이 안정적 2·3위 구조.</div>
+    <div class="sku-row">
+      <div class="sku-card">
+        <div class="sku-title">6월 브랜드위크 SKU별 매출 점유</div>
+        <div class="sku-item">
+          <div class="sku-name">스테인틴트</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:34.5%;background:#4472C4"></div></div>
+          <div class="sku-pct" style="color:#4472C4">34.5%</div>
+        </div>
+        <div class="sku-item">
+          <div class="sku-name">리퀴드틴트</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:22.7%;background:#60A5FA"></div></div>
+          <div class="sku-pct" style="color:#60A5FA">22.7%</div>
+        </div>
+        <div class="sku-item">
+          <div class="sku-name">쿠션</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:11.8%;background:#93C5FD"></div></div>
+          <div class="sku-pct" style="color:#93C5FD">11.8%</div>
+        </div>
+        <div class="sku-item">
+          <div class="sku-name">기획세트</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:7.6%;background:#C4B5FD"></div></div>
+          <div class="sku-pct" style="color:#6D28D9">7.6%</div>
+        </div>
+        <div class="sku-item">
+          <div class="sku-name">기타</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:23.5%;background:#E5E7EB"></div></div>
+          <div class="sku-pct" style="color:#6B7280">23.5%</div>
+        </div>
+        <div class="note" style="margin-top:12px">히어로 3 SKU 합산: 69.0% | 기획세트 포함 시 76.6%</div>
+      </div>
+      <div class="sku-card">
+        <div class="sku-title">스테인틴트 점유율 추이 (4개월)</div>
+        <div class="sku-item">
+          <div class="sku-name" style="color:#8B5CF6">3월</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:38%;background:#8B5CF6"></div></div>
+          <div class="sku-pct" style="color:#8B5CF6">~38%</div>
+        </div>
+        <div class="sku-item">
+          <div class="sku-name" style="color:#F59E0B">4월</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:35%;background:#F59E0B"></div></div>
+          <div class="sku-pct" style="color:#F59E0B">~35%</div>
+        </div>
+        <div class="sku-item">
+          <div class="sku-name" style="color:#10B981">5월</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:36%;background:#10B981"></div></div>
+          <div class="sku-pct" style="color:#10B981">~36%</div>
+        </div>
+        <div class="sku-item">
+          <div class="sku-name" style="color:#4472C4">6월</div>
+          <div class="sku-bar-bg"><div class="sku-bar-fill" style="width:34.5%;background:#4472C4"></div></div>
+          <div class="sku-pct" style="color:#4472C4">34.5%</div>
+        </div>
+        <div style="margin-top:16px;padding:12px;background:#EFF6FF;border-radius:8px;font-size:12px;color:#1E40AF;line-height:1.6;">
+          4개월 연속 34~38% 점유 유지. 외부광고 소재·랜딩이 스테인틴트 중심으로 고도화될수록 IG→Qoo10 유입 소비자의 구매 패턴도 히어로 SKU로 집중.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07. 6월 일별 추이 -->
+  <div class="section">
+    <div class="section-title">07 · 6월 일별 추이</div>
+    <div class="section-heading">6월 브랜드위크 일별 상세 (6/22~6/28)</div>
+    <div class="section-desc">첫날 외부유입 집중 + 이튿날 주문 흡수 패턴. 주말(6/27~6/28) CVR 반등.</div>
+    <div style="background:#fff; border:1px solid var(--border); border-radius:14px; padding:24px 28px; margin-bottom:16px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+        <div style="font-size:14px; font-weight:700; color:var(--navy);">거래 현황 (6/22~6/28)</div>
+        <div style="font-size:11px; color:var(--gray);">거래 상품 수 · 거래 상품 수량 · 거래 금액</div>
+      </div>
+      <div style="position:relative; height:340px;">
+        <canvas id="bwDailyChart"></canvas>
+      </div>
+    </div>
+    <div class="daily-wrap">
+      <table class="daily-table">
+        <thead>
+          <tr>
+            <th>일자</th>
+            <th>요일</th>
+            <th>PV</th>
+            <th>유입자</th>
+            <th>장바구니</th>
+            <th>주문</th>
+            <th>CVR</th>
+            <th>외부유입</th>
+            <th>IG</th>
+            <th>매출</th>
+            <th>신규고객%</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6/22</td><td>월</td><td>1,312</td><td>1,131</td><td>59</td><td>13</td>
+            <td>1.15%</td><td>591 <small style="color:#9CA3AF">★최고</small></td><td>550</td>
+            <td>¥24,856</td><td>84.6%</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>6/23</td><td>화</td><td>1,512</td><td>1,260</td><td>71</td><td>20</td>
+            <td>1.59%</td><td>556</td><td>525</td>
+            <td>¥50,413 <small style="color:#059669">★일매출최고</small></td><td>65.0%</td>
+          </tr>
+          <tr>
+            <td>6/24</td><td>수</td><td>1,019</td><td>876</td><td>43</td><td>14</td>
+            <td>1.60%</td><td>389</td><td>343</td>
+            <td>¥27,815</td><td>64.3%</td>
+          </tr>
+          <tr>
+            <td>6/25</td><td>목</td><td>1,036</td><td>875</td><td>54</td><td>14</td>
+            <td>1.60%</td><td>411</td><td>379</td>
+            <td>¥31,559</td><td>85.7%</td>
+          </tr>
+          <tr>
+            <td>6/26</td><td>금</td><td>1,060</td><td>926</td><td>41</td><td>15</td>
+            <td>1.62%</td><td>425</td><td>396</td>
+            <td>¥25,997</td><td>93.3%</td>
+          </tr>
+          <tr class="weekend-row">
+            <td>6/27</td><td>토</td><td>1,308</td><td>1,088</td><td>62</td><td>22</td>
+            <td><strong>2.02%</strong> <small style="color:#059669">★최고</small></td><td>450</td><td>409</td>
+            <td>¥48,138</td><td>86.4%</td>
+          </tr>
+          <tr class="weekend-row">
+            <td>6/28</td><td>일</td><td>1,373</td><td>1,163</td><td>68</td><td>19</td>
+            <td>1.63%</td><td>461</td><td>428</td>
+            <td>¥42,947</td><td>89.5%</td>
+          </tr>
+          <tr class="sep-row">
+            <td colspan="11">7일 합계 / 평균</td>
+          </tr>
+          <tr style="font-weight:700;">
+            <td>합계</td><td>7일</td><td>8,620</td><td>7,319</td><td>398</td><td>117</td>
+            <td>1.60%</td><td>3,283 (38.1%)</td><td>3,030</td>
+            <td>¥251,725</td><td>81.2%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:8px">6/22(월) 외부유입 591로 최고이나 CVR 1.15%로 최저 → 탐색 유입. 6/23(화) 주문 20건으로 흡수. 6/27~6/28 주말 CVR 반등(2.02%, 1.63%).</div>
+  </div>
+
+  <!-- 08. 5월·6월 시사점 -->
+  <div class="section">
+    <div class="section-title">08 · 5·6월 시사점</div>
+    <div class="section-heading">발렌 외부광고 도입 이후 변화와 보강 포인트</div>
+    <div class="insight-grid">
+      <div class="insight-box featured">
+        <div class="icon">📈</div>
+        <h3>6월 핵심 변화 3가지</h3>
+        <p>
+          ① <strong>장바구니→주문 반등:</strong> 5월 23.65% → 6월 29.40% (+5.75%p). 신규 유입이 늘었음에도 전환이 개선 — 소재 최적화·타겟팅 정확도 향상의 신호.<br><br>
+          ② <strong>신규고객 81.2% 역대 최고:</strong> 외부광고가 메가와리 직후 기존 팬 수요 외에 완전 신규 소비자를 추가로 공급하는 구조 안정화.<br><br>
+          ③ <strong>AOV ¥2,151 역대 최고:</strong> 비할인 상시 기간임에도 메가와리 AOV(¥1,976) 상회. 히어로 SKU 가격 방어력 입증.
+        </p>
+      </div>
+      <div class="insight-box">
+        <div class="icon">⚠️</div>
+        <h3>보강 필요: 장바구니 전환율 하락</h3>
+        <p>
+          장바구니 전환율이 3월 9.03% → 6월 5.44%로 지속 하락. 외부 신규 유입 증가에 따른 구조적 현상이지만, <strong>장바구니 이탈 방지 전략</strong> 검토가 필요합니다. Qoo10 내 타임쿠폰 설정, 장바구니 리마케팅 광고(IG DM 또는 FB 리타겟팅) 추가 고려.
+        </p>
+      </div>
+      <div class="insight-box">
+        <div class="icon">🔗</div>
+        <h3>보강 필요: LPV → Qoo10 도달율</h3>
+        <p>
+          메타 LPV 대비 Qoo10 IG 실제 도달율이 5월 68.9% → 6월 47.6%로 하락. 광고 클릭 후 Qoo10 상품 페이지로 이어지는 비율이 낮아지고 있습니다. 랜딩 URL 최적화 및 광고 소재-상품 페이지 간 일관성 점검 필요.
+        </p>
+      </div>
+      <div class="insight-box">
+        <div class="icon">💡</div>
+        <h3>5월 장바구니→주문 저조 재해석</h3>
+        <p>
+          5월 23.65%는 이후 6월 메가와리로 구매가 이전된 "보류 수요" 효과로 해석됩니다. 5월 브랜드위크에서 장바구니에 담은 소비자 일부가 6월 메가와리로 이동해 소비했을 가능성이 높습니다. 즉 <strong>5월의 낮은 전환율이 6월 메가와리 성과에 간접 기여</strong>한 구조.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 09. 종합 결론 -->
+  <div class="section">
+    <div class="section-title">09 · 종합 결론</div>
+    <div class="section-heading">발렌 외부광고 4개월 누적 효과 검증</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <div class="num">+35.4%p</div>
+        <h3>외부유입 비중 성장</h3>
+        <p>인하우스(2.7%)에서 발렌 풀(38.1%)로 14배 확장. Instagram이 주 외부채널로 단일화 완료.</p>
+      </div>
+      <div class="conclusion-card">
+        <div class="num">+21%p</div>
+        <h3>신규고객 비율 확대</h3>
+        <p>3월 60.2% → 6월 81.2%. 기존 팬 기반에서 신규 소비자 풀로 지속 확장 중.</p>
+      </div>
+      <div class="conclusion-card">
+        <div class="num">¥2,151</div>
+        <h3>AOV 최고치 달성</h3>
+        <p>할인 없는 상시 기간 비할인 객단가가 메가와리 기간(¥1,976) 상회. 히어로 SKU 가격 방어력 확인.</p>
+      </div>
+    </div>
+
+    <div class="next-actions">
+      <h3>Next Actions · 다음 브랜드위크 준비</h3>
+      <ul>
+        <li>장바구니 이탈 방지: Qoo10 타임쿠폰 또는 IG 리타겟팅 광고 추가 — 장바구니 담은 소비자의 주문 전환율 29.40% → 35%+ 목표</li>
+        <li>LPV→Qoo10 도달율 개선: 랜딩 URL 점검 + 소재 CTA와 상품 페이지 일관성 강화 — 6월 47.6% → 60%+ 복원</li>
+        <li>주말 특수 활용: 6/27(토) CVR 2.02% 확인. 주말 예산 집중 운영 또는 한정 혜택 타이밍 검토</li>
+        <li>메가와리 직후 지연 재결제 패턴 의도적 설계: 3월 3/23 자연 발생 → 다음 메가와리 직후 브랜드위크에 첫날 집중 소재 기획</li>
+        <li>히어로 SKU 집중 유지: 스테인틴트 4개월 35% 점유 확인. 신제품 도입 전 히어로 SKU 인지도 선행 구축 필수</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  VALEN × 무지개맨션 · Qoo10 JP 브랜드위크 4개월 종합 리포트 · 2026.06.30 · CONFIDENTIAL
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const ctx = document.getElementById('bwDailyChart');
+  if (!ctx || typeof Chart === 'undefined') return;
+
+  const labels = ['6/22 (월)','6/23 (화)','6/24 (수)','6/25 (목)','6/26 (금)','6/27 (토)','6/28 (일)'];
+  const 거래상품수 = [7, 8, 9, 6, 6, 11, 9];       // 주문 건수(TX 상품수 근사)
+  const 거래상품수량 = [15, 29, 14, 14, 15, 25, 24]; // 주문 수량
+  const 거래금액 = [24856, 50413, 27815, 31559, 25997, 48138, 42947];
+
+  new Chart(ctx, {
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          type: 'bar',
+          label: '거래 상품 수',
+          data: 거래상품수,
+          backgroundColor: '#8B7DD6',
+          borderRadius: 4,
+          yAxisID: 'yCount',
+          order: 3,
+        },
+        {
+          type: 'bar',
+          label: '거래 상품 수량',
+          data: 거래상품수량,
+          backgroundColor: '#C7C5D9',
+          borderRadius: 4,
+          yAxisID: 'yCount',
+          order: 2,
+        },
+        {
+          type: 'line',
+          label: '거래 금액 (¥)',
+          data: 거래금액,
+          borderColor: '#B94FC4',
+          backgroundColor: 'rgba(185,79,196,0.08)',
+          borderWidth: 2.5,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          pointBackgroundColor: '#B94FC4',
+          tension: 0.25,
+          yAxisID: 'ySales',
+          order: 1,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { size: 12 }, padding: 14, usePointStyle: true }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) {
+              const v = ctx.parsed.y;
+              if (ctx.dataset.label === '거래 금액 (¥)') return ` ${ctx.dataset.label}: ¥${v.toLocaleString()}`;
+              return ` ${ctx.dataset.label}: ${v}`;
+            }
+          }
+        }
+      },
+      scales: {
+        yCount: {
+          type: 'linear', position: 'left', beginAtZero: true,
+          ticks: { font:{size:11}, stepSize: 6 },
+          grid: { color: '#F0F0F5' },
+          title: { display: false }
+        },
+        ySales: {
+          type: 'linear', position: 'right', beginAtZero: true,
+          ticks: {
+            font:{size:11},
+            color: '#B94FC4',
+            callback: function(v) { return (v/1000).toFixed(0) + 'K'; }
+          },
+          grid: { drawOnChartArea: false },
+          title: { display: false }
+        },
+        x: { ticks: { font: { size: 12 } }, grid: { display: false } }
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
